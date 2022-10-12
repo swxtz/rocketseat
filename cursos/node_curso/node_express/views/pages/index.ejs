@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head') %>
+<html lang="pt-br">
+  <body class="container">
+    <%- include('../partials/header', {pagina: 'home'}) %>
+    <main>
+      <div class="jumbotron">
+        <h1>Node com EJS</h1>
+        <p>Vamos aprender a trabalhar com EJS</p>
+      </div>
+
+      <ul>
+        <% qualiys.forEach(function(quality) { %>
+          <li>
+            <strong><%= quality.title %></strong> <p><%= quality.message %>/p>
+          </li>
+
+       <% }) %>
+      </ul>
+    </main>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>
